@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+    
+    body{
+       font-family: "Bai Jamjuree", sans-serif;
+       font-size: 18px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+    
+    }
+    #main-container{
+        min-height: 100vh;
+        width: 98%;
+       background-image: url(./images/bg-header-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding-top: 5rem;
+    }
+        header,main{
+        padding: 0 1.2rem 0 1.2rem;
+      } 
+     header, main, footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+        .card-one, .card-two, #it-ul, .download-button, #img-ul, .main-footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.7rem;
+        }
+        .footer-ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        #social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .9rem;
+            margin-left: 1rem;
+            margin-top: 1.5rem;
+        }
+        .social{width:.9rem;}
+        #img-ul{gap: 1.7rem;}
+        #logo{width: 4rem;}
+        #foot-logo{margin-top:1.5rem; width: 3rem;}
+
+
+
+        h1, h2, h3, h4, dt{
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: .6rem;
+            margin-top: 1.7rem;
+        
+            color: rgb(87, 85, 85);
+        }
+    
+         p, dd, .tools{
+            font-weight: 400;
+            margin-bottom: 2.2rem;
+            text-align: center;
+            color:rgb(87, 85, 85);
+            letter-spacing: -.0.07rem;
+        }
+    
+
+        .download-button{
+            color: #fff;
+            padding: .7rem 3.3rem .7rem 3.3rem;
+            border-style: none;
+            border-radius: 50rem;
+        }
+        .ios-bt{
+            font-family:  "Bai Jamjuree";
+            background-color: hsl(171, 66%, 44%);
+            box-shadow: 0px 3px #1e8a7ac9;}
+            .ios-bt:hover{
+                background-color: #68bdb0;
+                    transition: 0.4s;
+            }
+        
+        .mac-bt{
+            font-family: "Bai Jamjuree";
+            background-color: hsl(233, 100%, 69%);
+            box-shadow: 0px 3px hsla(233, 66%, 60%, 0.462);}
+            .mac-bt:hover{ background-color: #8d9afa;
+                transition: 0.4s;
+            }
+
+    footer{
+        background-color:hsl(201, 11%, 66%);
+        margin-right: -.2rem;
+        margin-left:-.2rem
+      }
+    
+     /*Declaring Images sizes and removing list and link decorations*/      
+      #google-logo{margin-top: 6rem;}
+      #it-img{max-width: 80vw;}
+      #devices-img{max-width: 98%}
+      li,a{list-style-type: none;
+         text-decoration: none;}
+
+        .attribution { font-size: 11px; 
+        text-align: center;
+        margin-top: .8rem;}
+    .attribution a { color: hsl(228, 45%, 44%);}
+    .footer-ul a{ color: hsl(228, 45%, 44%);  }
+
+   /*Responsiveness*/
+   @media only screen and (min-width:949px){
+    #main-container{ background-image: url('./images/bg-header-desktop.png');}
+    .card-one, .tools, #img-ul, .download-button{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    }
+    #google-logo{
+        margin-top: 0;
+    }
+    #it-img{margin-left: -10.6rem;}
+    dd,dt{text-align: left;
+    margin-left: 2rem;}
+    header, main{margin-left: 8rem;
+          margin-right: 8rem;}
+    #social-icons{
+        display: flex;
+        flex-direction: row;
+        margin-left: 55rem;
+    }
+    
+    .footer-ul{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4,100px);
+        grid-template-rows: repeat(2,10px);
+        /*grid-template-areas: "logo faq priv install"
+                            "logo conct press";*/
+        text-align: left; 
+        column-gap: 2rem;
+        font-size: .9rem;
+        height: .5rem;
+        position: relative;
+        right: 9rem;
+    }
+    
+   .two{ 
+    grid-row-start: 2;
+    grid-column-start: 2
+
+   }
+    .four{
+        grid-row-start:2;
+        grid-column-start: 3;
+    }
+    #foot-logo{
+        position: relative;
+        right: 5rem;
+    }
+}
